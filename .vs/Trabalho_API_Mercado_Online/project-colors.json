@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "545ac73c-4952-4e57-ab82-be630d49cfd4": {
+      "ProjectGuid": "545ac73c-4952-4e57-ab82-be630d49cfd4",
+      "DisplayName": "Trabalho_API_Mercado_Online",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

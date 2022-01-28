@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Developer\\Downloads\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj": {}
+    "D:\\Git\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Developer\\Downloads\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj": {
+    "D:\\Git\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Developer\\Downloads\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj",
+        "projectUniqueName": "D:\\Git\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj",
         "projectName": "Trabalho_API_Mercado_Online",
-        "projectPath": "C:\\Users\\Developer\\Downloads\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj",
+        "projectPath": "D:\\Git\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online.csproj",
         "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Developer\\Downloads\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\obj\\",
+        "outputPath": "D:\\Git\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,26 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

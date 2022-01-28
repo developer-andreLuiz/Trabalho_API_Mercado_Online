@@ -1,0 +1,16 @@
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Trabalho_API_Mercado_Online.exe
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Trabalho_API_Mercado_Online.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Trabalho_API_Mercado_Online.runtimeconfig.json
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Trabalho_API_Mercado_Online.pdb
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\MySqlConnector.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Release\net6.0\PubTmp\Out\Trabalho_API_Mercado_Online.deps.json
