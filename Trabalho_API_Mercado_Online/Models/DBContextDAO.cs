@@ -21,6 +21,7 @@ namespace Trabalho_API_Mercado_Online.Models
         public virtual DbSet<CategoriasNivel1> CategoriasNivel1s { get; set; } = null!;
         public virtual DbSet<CategoriasNivel2> CategoriasNivel2s { get; set; } = null!;
         public virtual DbSet<CategoriasNivel3> CategoriasNivel3s { get; set; } = null!;
+        public virtual DbSet<CategoriasNivel4> CategoriasNivel4s { get; set; } = null!;
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Encarte> Encartes { get; set; } = null!;
         public virtual DbSet<EncarteItem> EncarteItems { get; set; } = null!;
@@ -193,6 +194,48 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasMaxLength(255)
                     .HasColumnName("nome")
                     .HasComment("nome da categoria nivel 3");
+
+                entity.Property(e => e.Ordem)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("ordem")
+                    .HasComment("ordem de exibição");
+            });
+
+            modelBuilder.Entity<CategoriasNivel4>(entity =>
+            {
+                entity.ToTable("categorias_nivel_4");
+
+                entity.HasComment("tabela com os dados da categoria nivel 4");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id")
+                    .HasComment("chave primaria da categoria nivel 4");
+
+                entity.Property(e => e.CategoriaNivel1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("categoria_nivel_1")
+                    .HasComment("referencia do codigo da categoria nivel 1");
+
+                entity.Property(e => e.CategoriaNivel2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("categoria_nivel_2")
+                    .HasComment("referencia do codigo da categoria nivel 2");
+
+                entity.Property(e => e.CategoriaNivel3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("categoria_nivel_3")
+                    .HasComment("referencia do codigo da categoria nivel 3");
+
+                entity.Property(e => e.Img)
+                    .HasColumnType("text")
+                    .HasColumnName("img")
+                    .HasComment("url da imagem");
+
+                entity.Property(e => e.Nome)
+                    .HasMaxLength(255)
+                    .HasColumnName("nome")
+                    .HasComment("nome da categoria nivel 4");
 
                 entity.Property(e => e.Ordem)
                     .HasColumnType("int(11)")
