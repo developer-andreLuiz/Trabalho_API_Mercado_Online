@@ -540,6 +540,11 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasColumnName("categoria_nivel_3")
                     .HasComment("referecia a categoria nivel 3");
 
+                entity.Property(e => e.CategoriaNivel4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("categoria_nivel_4")
+                    .HasComment("referecia a categoria nivel 4");
+
                 entity.Property(e => e.CodigoProduto)
                     .HasColumnType("int(11)")
                     .HasColumnName("codigo_produto")

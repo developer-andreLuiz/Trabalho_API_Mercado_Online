@@ -28,6 +28,10 @@ namespace Trabalho_API_Mercado_Online.Models
         /// referecia a categoria nivel 3
         /// </summary>
         public int CategoriaNivel3 { get; set; }
+        /// <summary>
+        /// referecia a categoria nivel 4
+        /// </summary>
+        public int CategoriaNivel4 { get; set; }
         public int Ordem { get; set; }
     }
 }
