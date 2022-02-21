@@ -32,14 +32,6 @@ namespace Trabalho_API_Mercado_Online.Controllers
             return Ok(obj);
         }
        
-        
-        
-        
-        
-        
-        
-        
-        
         // --/api/produto(POST: id, nome, valor, etc...)
         [Route("")]
         [HttpPost]
