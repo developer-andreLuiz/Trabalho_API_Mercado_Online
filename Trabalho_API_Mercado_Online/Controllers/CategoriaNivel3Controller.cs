@@ -5,17 +5,17 @@ using Trabalho_API_Mercado_Online.Models;
 namespace Trabalho_API_Mercado_Online.Controllers
 {
     [ApiController]
-    [Route("api/categoriasnivel4")]
-    public class CategoriasNivel4Controller : ControllerBase
+    [Route("api/categoria-nivel-3")]
+    public class CategoriaNivel3Controller : ControllerBase
     {
         private readonly DBContextDAO _banco = new DBContextDAO();
 
         // --/api/produtoscategoria
         [Route("")]
         [HttpGet]
-        public ActionResult GetCategoriasNivel4()
+        public ActionResult GetCategoriasNivel3()
         {
-            var list = _banco.CategoriasNivel4s.AsNoTracking().AsQueryable();
+            var list = _banco.CategoriasNivel3s.AsNoTracking().AsQueryable();
             return Ok(list);
         }
     }

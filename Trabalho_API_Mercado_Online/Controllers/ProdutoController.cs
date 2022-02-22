@@ -5,8 +5,8 @@ using Trabalho_API_Mercado_Online.Models;
 namespace Trabalho_API_Mercado_Online.Controllers
 {
     [ApiController]
-    [Route("api/produtos")]
-    public class ProdutosController : ControllerBase
+    [Route("api/produto")]
+    public class ProdutoController : ControllerBase
     {
         private readonly DBContextDAO _banco = new DBContextDAO();
         

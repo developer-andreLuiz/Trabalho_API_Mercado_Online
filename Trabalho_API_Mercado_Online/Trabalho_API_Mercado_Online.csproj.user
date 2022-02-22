@@ -3,6 +3,6 @@
   <PropertyGroup>
     <Controller_SelectedScaffolderID>ApiControllerWithActionsScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\Properties\PublishProfiles\APIMercadoOnline - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\Properties\PublishProfiles\API-Mercado-Online - Zip Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

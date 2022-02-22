@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="APIMercadoOnline" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="TrabalhoAPIMercadoOnline20220222051517" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Git\\Trabalho_API_Mercado_Online\\Trabalho_API_Mercado_Online\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
