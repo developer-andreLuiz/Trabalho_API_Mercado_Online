@@ -13,7 +13,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         // --/api/produto
         [Route("")]
         [HttpGet]
-        public ActionResult GetProdutos()
+        public ActionResult GetAll()
         {
             var list = _banco.Produtos.AsNoTracking().AsQueryable();
             return Ok(list);
@@ -22,7 +22,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         // --/api/produto/1
         [Route("{id}")]
         [HttpGet]
-        public ActionResult GetProduto(int id)
+        public ActionResult Get(int id)
         {
             var obj = _banco.Produtos.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (obj == null)
@@ -35,7 +35,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         // --/api/produto(POST: id, nome, valor, etc...)
         [Route("")]
         [HttpPost]
-        private ActionResult CreateProduto([FromBody] Produto produto)
+        private ActionResult Create([FromBody] Produto produto)
         {
             _banco.Produtos.Add(produto);
             _banco.SaveChanges();
@@ -45,7 +45,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         // --/api/produto/1 (PUT: id, nome, valor, etc...)
         [Route("{id}")]
         [HttpPut]
-        private ActionResult Atualizar(int id, [FromBody] Produto palavra)
+        private ActionResult Update(int id, [FromBody] Produto palavra)
         {
             var obj = _banco.Produtos.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (obj == null)
@@ -62,7 +62,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         // --/api/produto/1 (DELETE)
         [Route("{id}")]
         [HttpDelete]
-        private ActionResult Deletar(int id)
+        private ActionResult Delete(int id)
         {
             var obj = _banco.Produtos.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (obj == null)

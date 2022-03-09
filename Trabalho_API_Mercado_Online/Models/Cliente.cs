@@ -17,9 +17,18 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public string Nome { get; set; } = null!;
         /// <summary>
+        /// cpf do cliente
+        /// </summary>
+        public string? Cpf { get; set; }
+        /// <summary>
+        /// Data de nascimento  do cliente
+        /// </summary>
+        public DateOnly? Nascimento { get; set; }
+        /// <summary>
         /// numero de telefone do cliente
         /// </summary>
-        public string Celular { get; set; } = null!;
+        public string Telefone { get; set; } = null!;
+        public string AparelhoId { get; set; } = null!;
         /// <summary>
         /// saldo do cliente
         /// </summary>
@@ -28,25 +37,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// status do cliente
         /// </summary>
         public int Habilitado { get; set; }
-        /// <summary>
-        /// referencia do codigo do estado de entrega
-        /// </summary>
-        public string CodigoEstado { get; set; } = null!;
-        /// <summary>
-        /// referencia do codigo do municipio de entrega
-        /// </summary>
-        public string CodigoMunicipio { get; set; } = null!;
-        /// <summary>
-        /// referencia do codigo do bairro de entrega
-        /// </summary>
-        public string CodigoBairro { get; set; } = null!;
-        /// <summary>
-        /// endereço de entrega da compra
-        /// </summary>
-        public string Endereco { get; set; } = null!;
-        /// <summary>
-        /// complemento de endereço 
-        /// </summary>
-        public string? Complemento { get; set; }
     }
 }

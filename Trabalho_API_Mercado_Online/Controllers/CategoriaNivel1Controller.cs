@@ -13,9 +13,9 @@ namespace Trabalho_API_Mercado_Online.Controllers
         // --/api/produtoscategoria
         [Route("")]
         [HttpGet]
-        public ActionResult GetCategoriasNivel1()
+        public ActionResult GetAll()
         {
-            var list = _banco.CategoriasNivel1s.AsNoTracking().AsQueryable();
+            var list = _banco.CategoriaNivel1s.AsNoTracking().AsQueryable();
             return Ok(list);
         }
     }
