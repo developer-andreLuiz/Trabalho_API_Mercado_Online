@@ -43,7 +43,6 @@ D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.csproj.AssemblyReference.cache
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.GeneratedMSBuildEditorConfig.editorconfig
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.AssemblyInfoInputs.cache
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.AssemblyInfo.cs
