@@ -270,6 +270,7 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasComment("status do cliente");
 
                 entity.Property(e => e.Nascimento)
+                    .HasColumnType("datetime")
                     .HasColumnName("nascimento")
                     .HasComment("Data de nascimento  do cliente");
 
@@ -279,7 +280,7 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasComment("nome do cliente");
 
                 entity.Property(e => e.Saldo)
-                    .HasPrecision(2)
+                    .HasPrecision(10, 2)
                     .HasColumnName("saldo")
                     .HasComment("saldo do cliente");
 

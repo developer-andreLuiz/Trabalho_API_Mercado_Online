@@ -23,7 +23,7 @@ namespace Trabalho_API_Mercado_Online.Models
         /// <summary>
         /// Data de nascimento  do cliente
         /// </summary>
-        public DateOnly? Nascimento { get; set; }
+        public DateTime? Nascimento { get; set; }
         /// <summary>
         /// numero de telefone do cliente
         /// </summary>
