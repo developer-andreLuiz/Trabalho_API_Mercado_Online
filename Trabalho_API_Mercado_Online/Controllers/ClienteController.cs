@@ -69,8 +69,9 @@ namespace Trabalho_API_Mercado_Online.Controllers
                 return NotFound();
             }
             obj.Habilitado = 0;
-           _banco.SaveChanges();
-            return NoContent();
+            _banco.Clientes.Update(obj);
+            _banco.SaveChanges();
+            return Ok(obj);
         }
     }
 }
