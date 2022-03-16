@@ -269,6 +269,10 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasDefaultValueSql("'1'")
                     .HasComment("status do cliente");
 
+                entity.Property(e => e.Img)
+                    .HasMaxLength(255)
+                    .HasColumnName("img");
+
                 entity.Property(e => e.Nascimento)
                     .HasColumnType("datetime")
                     .HasColumnName("nascimento")

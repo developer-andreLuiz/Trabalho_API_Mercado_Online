@@ -16,6 +16,7 @@ namespace Trabalho_API_Mercado_Online.Models
         /// nome do cliente
         /// </summary>
         public string Nome { get; set; } = null!;
+        public string? Img { get; set; }
         /// <summary>
         /// cpf do cliente
         /// </summary>
