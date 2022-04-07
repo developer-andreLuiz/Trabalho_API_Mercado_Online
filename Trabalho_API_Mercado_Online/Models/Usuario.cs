@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Trabalho_API_Mercado_Online.Models
 {
     /// <summary>
-    /// tabela com informações dos clientes
+    /// tabela com informações dos usuarios
     /// </summary>
-    public partial class Cliente
+    public partial class Usuario
     {
         /// <summary>
         /// chave primaria da tabela e codigo de cada cliente
@@ -26,14 +26,14 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public DateTime? Nascimento { get; set; }
         /// <summary>
+        /// saldo do cliente
+        /// </summary>
+        public decimal? Saldo { get; set; }
+        /// <summary>
         /// numero de telefone do cliente
         /// </summary>
         public string Telefone { get; set; } = null!;
         public string AparelhoId { get; set; } = null!;
-        /// <summary>
-        /// saldo do cliente
-        /// </summary>
-        public decimal Saldo { get; set; }
         /// <summary>
         /// status do cliente
         /// </summary>

@@ -4,26 +4,26 @@ using Trabalho_API_Mercado_Online.Models;
 namespace Trabalho_API_Mercado_Online.Controllers
 {
     [ApiController]
-    [Route("api/cliente")]
-    public class ClienteController : ControllerBase
+    [Route("api/usuario")]
+    public class UsuarioController : ControllerBase
     {
         private readonly DBContextDAO _banco = new DBContextDAO();
         
-        // --/api/cliente
+        // --/api/usuario
         [Route("")]
         [HttpGet]
         public ActionResult GetAll()
         {
-            var list = _banco.Clientes.AsNoTracking().AsQueryable();
+            var list = _banco.Usuarios.AsNoTracking().AsQueryable();
             return Ok(list);
         }
-       
-        // --/api/cliente/1
+
+        // --/api/usuario/1
         [Route("{id}")]
         [HttpGet]
         public ActionResult Get(int id)
         {
-            var obj = _banco.Clientes.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var obj = _banco.Usuarios.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (obj == null)
             {
                 return NotFound();
@@ -31,48 +31,48 @@ namespace Trabalho_API_Mercado_Online.Controllers
             return Ok(obj);
         }
 
-        // --/api/cliente(POST: id, nome...)
+        // --/api/usuario(POST: id, nome...)
         [Route("")]
         [HttpPost]
-        public ActionResult Create([FromBody] Cliente cliente)
+        public ActionResult Create([FromBody] Usuario usuario)
         {
-            _banco.Clientes.Add(cliente);
+            _banco.Usuarios.Add(usuario);
             _banco.SaveChanges();
-            cliente.Img = $"https://mercadoonline.blob.core.windows.net/cliente/{cliente.Id}.jpg";
-            _banco.Clientes.Update(cliente);
+            usuario.Img = $"https://mercadoonline.blob.core.windows.net/cliente/{usuario.Id}.jpg";
+            _banco.Usuarios.Update(usuario);
             _banco.SaveChanges();
-            return Created($"/api/cliente/{cliente.Id}", cliente);
+            return Created($"/api/usuario/{usuario.Id}", usuario);
         }
 
-        // --/api/cliente/1 (PUT: id, nome...)
+        // --/api/usuario/1 (PUT: id, nome...)
         [Route("{id}")]
         [HttpPut]
-        public ActionResult Update(int id, [FromBody] Cliente cliente)
+        public ActionResult Update(int id, [FromBody] Usuario usuario)
         {
-            var obj = _banco.Clientes.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var obj = _banco.Usuarios.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            cliente.Id = id;
-            _banco.Clientes.Update(cliente);
+            usuario.Id = id;
+            _banco.Usuarios.Update(usuario);
             _banco.SaveChanges();
-            return Ok(cliente);
+            return Ok(usuario);
         }
 
-        // --/api/cliente/1
+        // --/api/usuario/1
         [Route("{id}")]
         [HttpDelete]
         public ActionResult Disable(int id)
         {
-            var obj = _banco.Clientes.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var obj = _banco.Usuarios.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
             obj.Habilitado = 0;
-            _banco.Clientes.Update(obj);
+            _banco.Usuarios.Update(obj);
             _banco.SaveChanges();
             return Ok(obj);
         }

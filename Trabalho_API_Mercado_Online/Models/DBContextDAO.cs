@@ -22,7 +22,6 @@ namespace Trabalho_API_Mercado_Online.Models
         public virtual DbSet<CategoriaNivel2> CategoriaNivel2s { get; set; } = null!;
         public virtual DbSet<CategoriaNivel3> CategoriaNivel3s { get; set; } = null!;
         public virtual DbSet<CategoriaNivel4> CategoriaNivel4s { get; set; } = null!;
-        public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Encarte> Encartes { get; set; } = null!;
         public virtual DbSet<EncarteItem> EncarteItems { get; set; } = null!;
         public virtual DbSet<Estado> Estados { get; set; } = null!;
@@ -31,13 +30,15 @@ namespace Trabalho_API_Mercado_Online.Models
         public virtual DbSet<Produto> Produtos { get; set; } = null!;
         public virtual DbSet<ProdutoCategorium> ProdutoCategoria { get; set; } = null!;
         public virtual DbSet<ProdutoCodigoBarra> ProdutoCodigoBarras { get; set; } = null!;
+        public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+        public virtual DbSet<UsuarioEndereco> UsuarioEnderecos { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=bancodados-mercado.mysql.database.azure.com;userid=root_andre;password=SistemaValendo1;database=db_mercado_online;sslmode=none;connect timeout=30", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.32-mysql"));
+                optionsBuilder.UseMySql("server=bancodados-mercado.mysql.database.azure.com;userid=root_andre;password=SistemaValendo1;database=db_mercado_online;sslmode=none;connect timeout=30", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.37-mysql"));
             }
         }
 
@@ -241,57 +242,6 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasColumnType("int(11)")
                     .HasColumnName("ordem")
                     .HasComment("ordem de exibição");
-            });
-
-            modelBuilder.Entity<Cliente>(entity =>
-            {
-                entity.ToTable("cliente");
-
-                entity.HasComment("tabela com informações dos clientes");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id")
-                    .HasComment("chave primaria da tabela e codigo de cada cliente");
-
-                entity.Property(e => e.AparelhoId)
-                    .HasMaxLength(255)
-                    .HasColumnName("aparelho_id");
-
-                entity.Property(e => e.Cpf)
-                    .HasMaxLength(11)
-                    .HasColumnName("cpf")
-                    .HasComment("cpf do cliente");
-
-                entity.Property(e => e.Habilitado)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("habilitado")
-                    .HasDefaultValueSql("'1'")
-                    .HasComment("status do cliente");
-
-                entity.Property(e => e.Img)
-                    .HasMaxLength(255)
-                    .HasColumnName("img");
-
-                entity.Property(e => e.Nascimento)
-                    .HasColumnType("datetime")
-                    .HasColumnName("nascimento")
-                    .HasComment("Data de nascimento  do cliente");
-
-                entity.Property(e => e.Nome)
-                    .HasMaxLength(255)
-                    .HasColumnName("nome")
-                    .HasComment("nome do cliente");
-
-                entity.Property(e => e.Saldo)
-                    .HasPrecision(10, 2)
-                    .HasColumnName("saldo")
-                    .HasComment("saldo do cliente");
-
-                entity.Property(e => e.Telefone)
-                    .HasMaxLength(20)
-                    .HasColumnName("telefone")
-                    .HasComment("numero de telefone do cliente");
             });
 
             modelBuilder.Entity<Encarte>(entity =>
@@ -568,6 +518,92 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasColumnType("int(11)")
                     .HasColumnName("codigo_produto")
                     .HasComment("referencia do codigo do produto");
+            });
+
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.ToTable("usuario");
+
+                entity.HasComment("tabela com informações dos usuarios");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id")
+                    .HasComment("chave primaria da tabela e codigo de cada cliente");
+
+                entity.Property(e => e.AparelhoId)
+                    .HasMaxLength(255)
+                    .HasColumnName("aparelho_id");
+
+                entity.Property(e => e.Cpf)
+                    .HasMaxLength(11)
+                    .HasColumnName("cpf")
+                    .HasComment("cpf do cliente");
+
+                entity.Property(e => e.Habilitado)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("habilitado")
+                    .HasDefaultValueSql("'1'")
+                    .HasComment("status do cliente");
+
+                entity.Property(e => e.Img)
+                    .HasMaxLength(255)
+                    .HasColumnName("img");
+
+                entity.Property(e => e.Nascimento)
+                    .HasColumnType("datetime")
+                    .HasColumnName("nascimento")
+                    .HasComment("Data de nascimento  do cliente");
+
+                entity.Property(e => e.Nome)
+                    .HasMaxLength(255)
+                    .HasColumnName("nome")
+                    .HasComment("nome do cliente");
+
+                entity.Property(e => e.Saldo)
+                    .HasPrecision(10, 2)
+                    .HasColumnName("saldo")
+                    .HasDefaultValueSql("'0.00'")
+                    .HasComment("saldo do cliente");
+
+                entity.Property(e => e.Telefone)
+                    .HasMaxLength(20)
+                    .HasColumnName("telefone")
+                    .HasComment("numero de telefone do cliente");
+            });
+
+            modelBuilder.Entity<UsuarioEndereco>(entity =>
+            {
+                entity.ToTable("usuario_endereco");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Cep)
+                    .HasMaxLength(255)
+                    .HasColumnName("cep");
+
+                entity.Property(e => e.Complemento)
+                    .HasMaxLength(255)
+                    .HasColumnName("complemento");
+
+                entity.Property(e => e.Endereco)
+                    .HasMaxLength(255)
+                    .HasColumnName("endereco");
+
+                entity.Property(e => e.IdUsuario)
+                    .HasMaxLength(45)
+                    .HasColumnName("id_usuario");
+
+                entity.Property(e => e.Principal)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("principal");
+
+                entity.Property(e => e.Referencia)
+                    .HasMaxLength(255)
+                    .HasColumnName("referencia");
             });
 
             OnModelCreatingPartial(modelBuilder);
