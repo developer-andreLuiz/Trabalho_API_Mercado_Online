@@ -19,17 +19,32 @@ namespace Trabalho_API_Mercado_Online.Controllers
         }
 
         // --/api/usuario/1
-        [Route("{id}")]
+        [Route("id/{id}")]
         [HttpGet]
         public ActionResult Get(int id)
         {
-            var obj = _banco.Usuarios.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var obj = _banco.Usuarios.AsNoTracking().FirstOrDefault(a => a.Id==id);
             if (obj == null)
             {
                 return NotFound();
             }
             return Ok(obj);
         }
+
+        // --/api/usuario/21999999999
+        [Route("telefone/{telefone}")]
+        [HttpGet]
+        public ActionResult Get(string telefone)
+        {
+            var obj = _banco.Usuarios.AsNoTracking().FirstOrDefault(a => a.Telefone.Equals(telefone));
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return Ok(obj);
+        }
+
+
 
         // --/api/usuario(POST: id, nome...)
         [Route("")]
@@ -38,7 +53,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         {
             _banco.Usuarios.Add(usuario);
             _banco.SaveChanges();
-            usuario.Img = $"https://mercadoonline.blob.core.windows.net/cliente/{usuario.Id}.jpg";
+             usuario.Img = $"https://mercadoonline.blob.core.windows.net/usuario/{usuario.Id}.jpg";
             _banco.Usuarios.Update(usuario);
             _banco.SaveChanges();
             return Created($"/api/usuario/{usuario.Id}", usuario);
