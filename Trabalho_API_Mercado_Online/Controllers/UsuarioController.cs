@@ -53,7 +53,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
         {
             _banco.Usuarios.Add(usuario);
             _banco.SaveChanges();
-             usuario.Img = $"https://mercadoonline.blob.core.windows.net/usuario/{usuario.Id}.jpg";
+             usuario.Img = $"https://mercadoonline.blob.core.windows.net/usuario/{usuario.Id}.png";
             _banco.Usuarios.Update(usuario);
             _banco.SaveChanges();
             return Created($"/api/usuario/{usuario.Id}", usuario);
