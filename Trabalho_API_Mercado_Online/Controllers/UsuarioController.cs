@@ -44,8 +44,6 @@ namespace Trabalho_API_Mercado_Online.Controllers
             return Ok(obj);
         }
 
-
-
         // --/api/usuario(POST: id, nome...)
         [Route("")]
         [HttpPost]
