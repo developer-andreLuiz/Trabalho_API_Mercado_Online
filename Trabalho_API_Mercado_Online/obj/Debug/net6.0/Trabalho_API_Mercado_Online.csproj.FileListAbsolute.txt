@@ -30,7 +30,6 @@ D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Trabalho_API_Mercado_Online.deps.json
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Trabalho_API_Mercado_Online.runtimeconfig.json
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Trabalho_API_Mercado_Online.dll
-D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\ref\Trabalho_API_Mercado_Online.dll
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Trabalho_API_Mercado_Online.pdb
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Humanizer.dll
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -58,3 +57,4 @@ D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.pdb
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.genruntimeconfig.cache
 D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\Trabalho_API_Mercado_Online.csproj.AssemblyReference.cache
+D:\Git\Trabalho_API_Mercado_Online\Trabalho_API_Mercado_Online\obj\Debug\net6.0\refint\Trabalho_API_Mercado_Online.dll
