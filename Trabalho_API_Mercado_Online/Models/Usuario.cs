@@ -8,21 +8,27 @@ namespace Trabalho_API_Mercado_Online.Models
     /// </summary>
     public partial class Usuario
     {
+        public Usuario()
+        {
+            Carrinhos = new HashSet<Carrinho>();
+            UsuarioEnderecos = new HashSet<UsuarioEndereco>();
+        }
+
         /// <summary>
-        /// chave primaria da tabela e codigo de cada cliente
+        /// chave primaria da tabela usuario
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// nome do cliente
+        /// nome do usuario
         /// </summary>
         public string Nome { get; set; } = null!;
         public string? Img { get; set; }
         /// <summary>
-        /// cpf do cliente
+        /// cpf do usuario
         /// </summary>
         public string? Cpf { get; set; }
         /// <summary>
-        /// Data de nascimento  do cliente
+        /// Data de nascimento  do usuario
         /// </summary>
         public DateTime? Nascimento { get; set; }
         /// <summary>
@@ -30,13 +36,19 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public decimal? Saldo { get; set; }
         /// <summary>
-        /// numero de telefone do cliente
+        /// numero de telefone do usuario
         /// </summary>
         public string Telefone { get; set; } = null!;
+        /// <summary>
+        /// id do dispositivo do usuario logado
+        /// </summary>
         public string AparelhoId { get; set; } = null!;
         /// <summary>
-        /// status do cliente
+        /// status do usuario
         /// </summary>
         public int Habilitado { get; set; }
+
+        public virtual ICollection<Carrinho> Carrinhos { get; set; }
+        public virtual ICollection<UsuarioEndereco> UsuarioEnderecos { get; set; }
     }
 }

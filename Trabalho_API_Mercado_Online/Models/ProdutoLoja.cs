@@ -6,11 +6,11 @@ namespace Trabalho_API_Mercado_Online.Models
     public partial class ProdutoLoja
     {
         /// <summary>
-        /// autonumerico chave primaria da tabela
+        /// chave primaria da tabela produto_loja
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// referencia id da tabela produto
+        /// referencia ao id da tabela produto
         /// </summary>
         public int Produto { get; set; }
         /// <summary>
@@ -22,7 +22,7 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public DateTime Validade { get; set; }
         /// <summary>
-        /// referencia id da tabela loja_prateleira
+        /// referencia ao id da tabela loja_prateleira
         /// </summary>
         public int Prateleira { get; set; }
         /// <summary>

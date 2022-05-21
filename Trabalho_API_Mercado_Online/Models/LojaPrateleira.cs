@@ -10,16 +10,21 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// codigo para prateleira dentro da estante exemplo prateleira 10 da estante 2
+        /// referente ao id de loja_estante
         /// </summary>
-        public int Codigo { get; set; }
-        /// <summary>
-        /// id referente a estante na loja para venda online
-        /// </summary>
-        public int EstanteLoja { get; set; }
+        public int LojaEstante { get; set; }
         /// <summary>
         /// livre  para armazenar mais itens
         /// </summary>
         public int Livre { get; set; }
+        /// <summary>
+        /// codigo da prateleira por estante 
+        /// exemplo 
+        /// estante 1 (loja_estante) prateleira 5 (codigo)
+        /// estante 3 prateleira 5
+        /// </summary>
+        public int Codigo { get; set; }
+
+        public virtual LojaEstante LojaEstanteNavigation { get; set; } = null!;
     }
 }

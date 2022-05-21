@@ -13,12 +13,14 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// referencia do codigo do produto
+        /// referencia ao id de produto
         /// </summary>
-        public int CodigoProduto { get; set; }
+        public int Produto { get; set; }
         /// <summary>
         /// codigo de barra do produto
         /// </summary>
         public string CodigoBarra { get; set; } = null!;
+
+        public virtual Produto ProdutoNavigation { get; set; } = null!;
     }
 }

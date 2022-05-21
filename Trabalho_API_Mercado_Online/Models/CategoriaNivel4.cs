@@ -8,6 +8,11 @@ namespace Trabalho_API_Mercado_Online.Models
     /// </summary>
     public partial class CategoriaNivel4
     {
+        public CategoriaNivel4()
+        {
+            ProdutoCategoria = new HashSet<ProdutoCategorium>();
+        }
+
         /// <summary>
         /// chave primaria da categoria nivel 4
         /// </summary>
@@ -25,16 +30,19 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public int Ordem { get; set; }
         /// <summary>
-        /// referencia do codigo da categoria nivel 1
+        /// referencia ao id  da categoria nivel 1
         /// </summary>
         public int CategoriaNivel1 { get; set; }
         /// <summary>
-        /// referencia do codigo da categoria nivel 2
+        /// referencia ao id da categoria nivel 2
         /// </summary>
         public int CategoriaNivel2 { get; set; }
         /// <summary>
-        /// referencia do codigo da categoria nivel 3
+        /// referencia ao id da categoria nivel 3
         /// </summary>
         public int CategoriaNivel3 { get; set; }
+
+        public virtual CategoriaNivel3 CategoriaNivel3Navigation { get; set; } = null!;
+        public virtual ICollection<ProdutoCategorium> ProdutoCategoria { get; set; }
     }
 }

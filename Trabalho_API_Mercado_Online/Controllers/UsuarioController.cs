@@ -44,6 +44,10 @@ namespace Trabalho_API_Mercado_Online.Controllers
             return Ok(obj);
         }
 
+        
+        
+        
+        
         // --/api/usuario(POST: id, nome...)
         [Route("")]
         [HttpPost]
@@ -54,7 +58,7 @@ namespace Trabalho_API_Mercado_Online.Controllers
              usuario.Img = $"https://mercadoonline.blob.core.windows.net/usuario/{usuario.Id}.png";
             _banco.Usuarios.Update(usuario);
             _banco.SaveChanges();
-            return Created($"/api/usuario/{usuario.Id}", usuario);
+            return Created($"/api/usuario/id/{usuario.Id}", usuario);
         }
 
         // --/api/usuario/1 (PUT: id, nome...)
