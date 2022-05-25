@@ -668,6 +668,12 @@ namespace Trabalho_API_Mercado_Online.Models
             {
                 entity.ToTable("produto_loja");
 
+                entity.HasIndex(e => e.Funcionario, "fk_produto_loja_funcionario_idx");
+
+                entity.HasIndex(e => e.Prateleira, "fk_produto_loja_prateleira_idx");
+
+                entity.HasIndex(e => e.Produto, "fk_produto_loja_produto_idx");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .HasColumnName("id")
@@ -716,6 +722,22 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasColumnType("datetime")
                     .HasColumnName("validade")
                     .HasComment("validade do produto");
+
+                entity.HasOne(d => d.FuncionarioNavigation)
+                    .WithMany(p => p.ProdutoLojas)
+                    .HasForeignKey(d => d.Funcionario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_produto_loja_funcionario");
+
+                entity.HasOne(d => d.PrateleiraNavigation)
+                    .WithMany(p => p.ProdutoLojas)
+                    .HasForeignKey(d => d.Prateleira)
+                    .HasConstraintName("fk_produto_loja_prateleira");
+
+                entity.HasOne(d => d.ProdutoNavigation)
+                    .WithMany(p => p.ProdutoLojas)
+                    .HasForeignKey(d => d.Produto)
+                    .HasConstraintName("fk_produto_loja_produto");
             });
 
             modelBuilder.Entity<Usuario>(entity =>

@@ -42,5 +42,9 @@ namespace Trabalho_API_Mercado_Online.Models
         /// marcar produto com balanço verificado após entrada na prateleira
         /// </summary>
         public int? ConferenciaBalanco { get; set; }
+
+        public virtual Funcionario FuncionarioNavigation { get; set; } = null!;
+        public virtual LojaPrateleira PrateleiraNavigation { get; set; } = null!;
+        public virtual Produto ProdutoNavigation { get; set; } = null!;
     }
 }

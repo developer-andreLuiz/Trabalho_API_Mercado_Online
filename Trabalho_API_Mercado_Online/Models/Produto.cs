@@ -13,6 +13,7 @@ namespace Trabalho_API_Mercado_Online.Models
             Carrinhos = new HashSet<Carrinho>();
             ProdutoCategoria = new HashSet<ProdutoCategorium>();
             ProdutoCodigoBarras = new HashSet<ProdutoCodigoBarra>();
+            ProdutoLojas = new HashSet<ProdutoLoja>();
         }
 
         /// <summary>
@@ -85,5 +86,6 @@ namespace Trabalho_API_Mercado_Online.Models
         public virtual ICollection<Carrinho> Carrinhos { get; set; }
         public virtual ICollection<ProdutoCategorium> ProdutoCategoria { get; set; }
         public virtual ICollection<ProdutoCodigoBarra> ProdutoCodigoBarras { get; set; }
+        public virtual ICollection<ProdutoLoja> ProdutoLojas { get; set; }
     }
 }
