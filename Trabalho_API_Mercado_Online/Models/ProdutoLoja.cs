@@ -13,6 +13,7 @@ namespace Trabalho_API_Mercado_Online.Models
         /// referencia ao id da tabela produto
         /// </summary>
         public int Produto { get; set; }
+        public decimal CustoUnitario { get; set; }
         /// <summary>
         /// data de entrada do produto
         /// </summary>

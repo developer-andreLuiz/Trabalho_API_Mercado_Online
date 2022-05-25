@@ -345,7 +345,6 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasComment("endereço do funcionario");
 
                 entity.Property(e => e.Habilitado)
-                    .HasColumnType("int(11)")
                     .HasColumnName("habilitado")
                     .HasComment("verifica se o funcionario esta ativo na empresa");
 
@@ -500,6 +499,8 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasMaxLength(255)
                     .HasColumnName("gramatura")
                     .HasComment("1,5L  - 50ml (sem espaço e maiusculo) kg - gr - lt - ml - und\n");
+
+                entity.Property(e => e.Habilitado).HasColumnName("habilitado");
 
                 entity.Property(e => e.IgualaProduto)
                     .HasColumnType("int(11)")
@@ -681,6 +682,10 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasColumnType("int(11)")
                     .HasColumnName("conferencia_validade")
                     .HasComment("marcar produto com validade verificada após entrada na prateleira");
+
+                entity.Property(e => e.CustoUnitario)
+                    .HasPrecision(10, 2)
+                    .HasColumnName("custo_unitario");
 
                 entity.Property(e => e.Entrada)
                     .HasColumnType("datetime")

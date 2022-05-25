@@ -49,7 +49,7 @@ namespace Trabalho_API_Mercado_Online.Models
         /// <summary>
         /// verifica se o funcionario esta ativo na empresa
         /// </summary>
-        public int Habilitado { get; set; }
+        public bool Habilitado { get; set; }
 
         public virtual FuncionarioCargo? CargoNavigation { get; set; }
     }

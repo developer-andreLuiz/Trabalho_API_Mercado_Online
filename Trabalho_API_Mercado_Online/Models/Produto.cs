@@ -80,6 +80,7 @@ namespace Trabalho_API_Mercado_Online.Models
         /// informação nutricional do produto
         /// </summary>
         public string Informacao { get; set; } = null!;
+        public bool Habilitado { get; set; }
 
         public virtual ICollection<Carrinho> Carrinhos { get; set; }
         public virtual ICollection<ProdutoCategorium> ProdutoCategoria { get; set; }
