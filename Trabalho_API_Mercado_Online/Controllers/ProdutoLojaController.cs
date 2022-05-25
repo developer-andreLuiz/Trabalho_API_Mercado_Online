@@ -58,7 +58,21 @@ namespace Trabalho_API_Mercado_Online.Controllers
             return Ok(produtoLoja);
         }
 
-
+        // --/api/usuario/1
+        [Route("{id}")]
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            var obj = _banco.ProdutoLojas.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+          
+            _banco.ProdutoLojas.Remove(obj);
+            _banco.SaveChanges();
+            return Ok(obj);
+        }
 
     }
 }
