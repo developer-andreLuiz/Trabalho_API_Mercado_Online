@@ -33,7 +33,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// ponto de referencia do endereço (opcional)
         /// </summary>
         public string? Referencia { get; set; }
-
-        public virtual Usuario UsuarioNavigation { get; set; } = null!;
     }
 }

@@ -24,8 +24,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// quantidade de itens do mesmo produto no carrinho
         /// </summary>
         public int Quantidade { get; set; }
-
-        public virtual Produto ProdutoNavigation { get; set; } = null!;
-        public virtual Usuario UsuarioNavigation { get; set; } = null!;
     }
 }

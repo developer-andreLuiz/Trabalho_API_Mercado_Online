@@ -8,14 +8,6 @@ namespace Trabalho_API_Mercado_Online.Models
     /// </summary>
     public partial class Produto
     {
-        public Produto()
-        {
-            Carrinhos = new HashSet<Carrinho>();
-            ProdutoCategoria = new HashSet<ProdutoCategorium>();
-            ProdutoCodigoBarras = new HashSet<ProdutoCodigoBarra>();
-            ProdutoLojas = new HashSet<ProdutoLoja>();
-        }
-
         /// <summary>
         /// chave primaria da tabela produto
         /// </summary>
@@ -82,10 +74,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public string Informacao { get; set; } = null!;
         public bool Habilitado { get; set; }
-
-        public virtual ICollection<Carrinho> Carrinhos { get; set; }
-        public virtual ICollection<ProdutoCategorium> ProdutoCategoria { get; set; }
-        public virtual ICollection<ProdutoCodigoBarra> ProdutoCodigoBarras { get; set; }
-        public virtual ICollection<ProdutoLoja> ProdutoLojas { get; set; }
     }
 }

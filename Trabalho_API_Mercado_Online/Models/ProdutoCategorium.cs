@@ -36,11 +36,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// ordem de exibição
         /// </summary>
         public int Ordem { get; set; }
-
-        public virtual CategoriaNivel1 CategoriaNivel1Navigation { get; set; } = null!;
-        public virtual CategoriaNivel2? CategoriaNivel2Navigation { get; set; }
-        public virtual CategoriaNivel3? CategoriaNivel3Navigation { get; set; }
-        public virtual CategoriaNivel4? CategoriaNivel4Navigation { get; set; }
-        public virtual Produto ProdutoNavigation { get; set; } = null!;
     }
 }

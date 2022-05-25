@@ -20,7 +20,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// codigo de barra do produto
         /// </summary>
         public string CodigoBarra { get; set; } = null!;
-
-        public virtual Produto ProdutoNavigation { get; set; } = null!;
     }
 }

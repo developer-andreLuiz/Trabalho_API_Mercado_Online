@@ -8,12 +8,6 @@ namespace Trabalho_API_Mercado_Online.Models
     /// </summary>
     public partial class Usuario
     {
-        public Usuario()
-        {
-            Carrinhos = new HashSet<Carrinho>();
-            UsuarioEnderecos = new HashSet<UsuarioEndereco>();
-        }
-
         /// <summary>
         /// chave primaria da tabela usuario
         /// </summary>
@@ -47,8 +41,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// status do usuario
         /// </summary>
         public int Habilitado { get; set; }
-
-        public virtual ICollection<Carrinho> Carrinhos { get; set; }
-        public virtual ICollection<UsuarioEndereco> UsuarioEnderecos { get; set; }
     }
 }

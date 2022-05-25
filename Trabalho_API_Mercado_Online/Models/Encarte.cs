@@ -5,11 +5,6 @@ namespace Trabalho_API_Mercado_Online.Models
 {
     public partial class Encarte
     {
-        public Encarte()
-        {
-            EncarteItems = new HashSet<EncarteItem>();
-        }
-
         /// <summary>
         /// chave primaria do encarte
         /// </summary>
@@ -34,7 +29,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// decide se é frente ou verso
         /// </summary>
         public int Frente { get; set; }
-
-        public virtual ICollection<EncarteItem> EncarteItems { get; set; }
     }
 }

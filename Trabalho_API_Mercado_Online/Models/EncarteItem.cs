@@ -25,7 +25,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// valor do produto
         /// </summary>
         public string Valor { get; set; } = null!;
-
-        public virtual Encarte EncarteNavigation { get; set; } = null!;
     }
 }

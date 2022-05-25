@@ -5,11 +5,6 @@ namespace Trabalho_API_Mercado_Online.Models
 {
     public partial class Funcionario
     {
-        public Funcionario()
-        {
-            ProdutoLojas = new HashSet<ProdutoLoja>();
-        }
-
         /// <summary>
         /// chave primaria da tabela produto
         /// </summary>
@@ -55,8 +50,5 @@ namespace Trabalho_API_Mercado_Online.Models
         /// verifica se o funcionario esta ativo na empresa
         /// </summary>
         public bool Habilitado { get; set; }
-
-        public virtual FuncionarioCargo? CargoNavigation { get; set; }
-        public virtual ICollection<ProdutoLoja> ProdutoLojas { get; set; }
     }
 }
