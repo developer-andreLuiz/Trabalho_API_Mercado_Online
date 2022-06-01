@@ -14,10 +14,6 @@ namespace Trabalho_API_Mercado_Online.Models
         /// </summary>
         public int LojaEstante { get; set; }
         /// <summary>
-        /// livre  para armazenar mais itens
-        /// </summary>
-        public int Livre { get; set; }
-        /// <summary>
         /// codigo da prateleira por estante 
         /// exemplo 
         /// estante 1 (loja_estante) prateleira 5 (codigo)

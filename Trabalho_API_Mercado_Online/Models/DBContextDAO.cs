@@ -395,11 +395,6 @@ namespace Trabalho_API_Mercado_Online.Models
                     .HasColumnName("codigo")
                     .HasComment("codigo da prateleira por estante \nexemplo \nestante 1 (loja_estante) prateleira 5 (codigo)\nestante 3 prateleira 5");
 
-                entity.Property(e => e.Livre)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("livre")
-                    .HasComment("livre  para armazenar mais itens");
-
                 entity.Property(e => e.LojaEstante)
                     .HasColumnType("int(11)")
                     .HasColumnName("loja_estante")
@@ -514,19 +509,16 @@ namespace Trabalho_API_Mercado_Online.Models
                 entity.Property(e => e.CategoriaNivel2)
                     .HasColumnType("int(11)")
                     .HasColumnName("categoria_nivel_2")
-                    .HasDefaultValueSql("'0'")
                     .HasComment("referecia ao id de categoria nivel 2");
 
                 entity.Property(e => e.CategoriaNivel3)
                     .HasColumnType("int(11)")
                     .HasColumnName("categoria_nivel_3")
-                    .HasDefaultValueSql("'0'")
                     .HasComment("referecia ao id de categoria nivel 3");
 
                 entity.Property(e => e.CategoriaNivel4)
                     .HasColumnType("int(11)")
                     .HasColumnName("categoria_nivel_4")
-                    .HasDefaultValueSql("'0'")
                     .HasComment("referecia ao id de categoria nivel 4");
 
                 entity.Property(e => e.Ordem)

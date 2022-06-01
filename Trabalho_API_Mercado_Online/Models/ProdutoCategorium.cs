@@ -23,15 +23,15 @@ namespace Trabalho_API_Mercado_Online.Models
         /// <summary>
         /// referecia ao id de categoria nivel 2
         /// </summary>
-        public int? CategoriaNivel2 { get; set; }
+        public int CategoriaNivel2 { get; set; }
         /// <summary>
         /// referecia ao id de categoria nivel 3
         /// </summary>
-        public int? CategoriaNivel3 { get; set; }
+        public int CategoriaNivel3 { get; set; }
         /// <summary>
         /// referecia ao id de categoria nivel 4
         /// </summary>
-        public int? CategoriaNivel4 { get; set; }
+        public int CategoriaNivel4 { get; set; }
         /// <summary>
         /// ordem de exibição
         /// </summary>
